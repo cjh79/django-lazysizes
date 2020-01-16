@@ -11,5 +11,6 @@ setup(
     description="Tools for using lazysizes.js with Django templates.",
     license="BSD",
     packages=find_packages(),
-    install_requires=["django >= 1.11", "beautifulsoup4 >= 4.5.3"],
+    test_suite='testrunner.run_tests',
+    install_requires=["django >= 1.11", "beautifulsoup4 >= 4.5.3", "lxml"],
 )
