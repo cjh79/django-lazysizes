@@ -10,4 +10,5 @@ def lazysize_images(html):
             cl = node.attrs.get('class', [])
             cl.append('lazyload')
             node.attrs['class'] = cl
-    return soup.find('body').decode_contents()
+    body = soup.find('body')
+    return body.decode_contents() if body else str(soup)
